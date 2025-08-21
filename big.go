@@ -7,17 +7,38 @@
 
 package endian
 
-// swapUint16 converts a uint16 to network byte order and back.
-func swapUint16(n uint16) uint16 {
+// NetToHostUint16 swaps the bytes of the given value (if necessary) to turn
+// them from network byte order to host byte order.
+func NetToHostUint16(n uint16) uint16 {
 	return n
 }
 
-// swapUint32 converts a uint16 to network byte order and back.
-func swapUint32(n uint32) uint32 {
+// HostToNetUint16 swaps the bytes of the given value (if necessary) to turn
+// them from host byte order to network byte order.
+func HostToNetUint16(n uint16) uint16 {
 	return n
 }
 
-// swapUint64 converts a uint16 to network byte order and back.
-func swapUint64(n uint64) uint64 {
+// NetToHostUint32 swaps the bytes of the given value (if necessary) to turn
+// them from network byte order to host byte order.
+func NetToHostUint32(n uint32) uint32 {
+	return n
+}
+
+// HostToNetUint32 swaps the bytes of the given value (if necessary) to turn
+// them from host byte order to network byte order.
+func HostToNetUint32(n uint32) uint32 {
+	return n
+}
+
+// NetToHostUint64 swaps the bytes of the given value (if necessary) to turn
+// them from network byte order to host byte order.
+func NetToHostUint64(n uint64) uint64 {
+	return n
+}
+
+// HostToNetUint64 swaps the bytes of the given value (if necessary) to turn
+// them from host byte order to network byte order.
+func HostToNetUint64(n uint64) uint64 {
 	return n
 }

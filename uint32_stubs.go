@@ -3,24 +3,14 @@
 // Use of this source code is governed by the Apache License 2.0
 // that can be found in the COPYING file.
 
-// +build 386 amd64,noasm amd64p32 arm arm64 ppc64le mipsle mips64le mips64p32le
+// +build !noasm
 
 package endian
 
 // NetToHostUint32 swaps the bytes of the given value (if necessary) to turn
 // them from network byte order to host byte order.
-func NetToHostUint32(n uint32) uint32 {
-	return swapUint32(n)
-}
+func NetToHostUint32(n uint32) uint32
 
 // HostToNetUint32 swaps the bytes of the given value (if necessary) to turn
 // them from host byte order to network byte order.
-func HostToNetUint32(n uint32) uint32 {
-	return swapUint32(n)
-}
-
-// swapUint32 converts a uint16 to network byte order and back.
-func swapUint32(n uint32) uint32 {
-	return (n&0x000000FF)<<24 | (n&0x0000FF00)<<8 |
-		(n&0x00FF0000)>>8 | (n&0xFF000000)>>24
-}
+func HostToNetUint32(n uint32) uint32

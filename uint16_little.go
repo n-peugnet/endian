@@ -7,6 +7,18 @@
 
 package endian
 
+// NetToHostUint16 swaps the bytes of the given value (if necessary) to turn
+// them from network byte order to host byte order.
+func NetToHostUint16(n uint16) uint16 {
+	return swapUint16(n)
+}
+
+// HostToNetUint16 swaps the bytes of the given value (if necessary) to turn
+// them from host byte order to network byte order.
+func HostToNetUint16(n uint16) uint16 {
+	return swapUint16(n)
+}
+
 // swapUint16 converts a uint16 to network byte order and back.
 func swapUint16(n uint16) uint16 {
 	return (n&0x00FF)<<8 | (n&0xFF00)>>8
