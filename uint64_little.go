@@ -1,7 +1,7 @@
 // Copyright (C) 2015  The endian Authors.  All rights reserved.
 // This file is part of the Go endian library.
 // Use of this source code is governed by the Apache License 2.0
-// that can be found in the COPYING file.
+// that can be found in the LICENSE file.
 
 // +build 386 amd64,noasm amd64p32 arm arm64 ppc64le mipsle mips64le mips64p32le
 
@@ -19,7 +19,7 @@ func hostToNetUint64(n uint64) uint64 {
 	return swapUint64(n)
 }
 
-// swapUint64 converts a uint16 to network byte order and back.
+// swapUint64 converts a uint64 to network byte order and back.
 func swapUint64(n uint64) uint64 {
 	return ((n & 0x00000000000000FF) << 56) |
 		((n & 0x000000000000FF00) << 40) |

@@ -1,7 +1,7 @@
 // Copyright (C) 2015  The endian Authors.  All rights reserved.
 // This file is part of the Go endian library.
 // Use of this source code is governed by the Apache License 2.0
-// that can be found in the COPYING file.
+// that can be found in the LICENSE file.
 
 // +build 386 amd64 amd64p32 arm arm64 ppc64le mipsle mips64le mips64p32le
 
